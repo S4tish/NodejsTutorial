@@ -1,0 +1,10 @@
+// Encryption example using cipher
+
+const crypto=require('crypto');
+
+const cipher=crypto.createCipher('aes192','a password');
+
+var encrypted=cipher.update('Hello javaTpoint','utf8','hex');
+
+encrypted+=cipher.final('hex');
+console.log(encrypted);
